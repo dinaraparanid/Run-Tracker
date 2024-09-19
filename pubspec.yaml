@@ -1,0 +1,29 @@
+name: run_tracker
+description: 'Run tracker mobile app'
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.3.2
+  sqflite: ^2.3.3+1
+  freezed_annotation: ^2.4.4
+  cupertino_icons: ^1.0.8
+  pretty_dio_logger: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  generate: true
+  assets:
+    - assets/
