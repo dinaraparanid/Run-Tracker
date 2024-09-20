@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:run_tracker/domain/theme/theme.dart';
 
-// TODO: colors
+const _Cultured = Color(0xFFF4F4F8);
+const _BlackChocolate = Color(0xFF1A1D07);
+const _Charcoal = Color(0xFF373F51);
+const _Platinum = Color(0xFFD8DBE2);
 
 @immutable
 class AppColors {
@@ -35,15 +38,17 @@ class AppColors {
 
 @immutable
 class AppBackgroundColors {
-  // TODO: colors
+  final Color primary;
 
-  const AppBackgroundColors();
+  const AppBackgroundColors({required this.primary});
 
-  // TODO: dark theme
-  factory AppBackgroundColors._darkTheme() => const AppBackgroundColors();
+  factory AppBackgroundColors._darkTheme() => const AppBackgroundColors(
+    primary: _Charcoal,
+  );
 
-  // TODO: light theme
-  factory AppBackgroundColors._lightTheme() => const AppBackgroundColors();
+  factory AppBackgroundColors._lightTheme() => const AppBackgroundColors(
+    primary: _Platinum,
+  );
 }
 
 @immutable
@@ -61,13 +66,15 @@ class AppTextColors {
 
 @immutable
 class AppButtonColors {
-  // TODO: colors
+  final Color topBar;
 
-  const AppButtonColors();
+  const AppButtonColors({required this.topBar});
 
-  // TODO: dark theme
-  factory AppButtonColors._darkTheme() => const AppButtonColors();
+  factory AppButtonColors._darkTheme() => const AppButtonColors(
+    topBar: _Cultured,
+  );
 
-  // TODO: light theme
-  factory AppButtonColors._lightTheme() => const AppButtonColors();
+  factory AppButtonColors._lightTheme() => const AppButtonColors(
+    topBar: _BlackChocolate,
+  );
 }
