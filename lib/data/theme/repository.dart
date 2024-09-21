@@ -8,7 +8,7 @@ final themeRepositoryProvider = Provider<ThemeRepository>(
   (ref) => _ThemeRepositoryImpl()
 );
 
-class _ThemeRepositoryImpl extends ThemeRepository {
+final class _ThemeRepositoryImpl extends ThemeRepository {
   @override
   Future<Theme> getCurrentTheme() async {
     final prefs = await SharedPreferences.getInstance();

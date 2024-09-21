@@ -14,7 +14,9 @@ dependencies:
   flutter_map: ^7.0.2
   flutter_map_geojson: ^1.0.8
   flutter_riverpod: ^2.5.1
+  fpdart: ^1.1.0
   cupertino_icons: ^1.0.8
+  freezed: ^2.5.7
   freezed_annotation: ^2.4.4
   geolocator: ^13.0.1
   latlong2: ^0.9.1
@@ -26,6 +28,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  build_runner: ^2.4.12
 
 flutter:
   generate: true

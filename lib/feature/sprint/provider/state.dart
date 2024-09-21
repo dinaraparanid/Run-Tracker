@@ -1,6 +1,13 @@
-import 'package:flutter/cupertino.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:run_tracker/domain/geolocator/mod.dart';
 
-@immutable
-class SprintState {
-  const SprintState();
+part 'state.freezed.dart';
+
+@freezed
+abstract class SprintState with _$SprintState {
+  const factory SprintState({
+    Position? currentPosition,
+    GeolocatorError? error,
+  }) = _SprintState;
 }
