@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
-import 'package:run_tracker/feature/sprint/presentation/ui/distance.dart';
-import 'package:run_tracker/feature/sprint/presentation/ui/tempo.dart';
-import 'package:run_tracker/feature/sprint/presentation/ui/timer.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/properties/distance.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/properties/tempo.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/properties/timer.dart';
 
 const _shadowSpreadRadius = 2.0;
 const _shadowBlurRadius = 8.0;

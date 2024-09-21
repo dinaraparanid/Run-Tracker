@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
 import 'package:run_tracker/feature/sprint/presentation/ui/cancel_button.dart';
-import 'package:run_tracker/feature/sprint/presentation/ui/properties.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/map.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/properties/properties.dart';
 
 class SprintScreen extends ConsumerWidget {
   const SprintScreen({super.key});
@@ -18,9 +19,14 @@ class SprintScreen extends ConsumerWidget {
         backgroundColor: backgroundColor,
         leading: const SprintCancelButton(),
       ),
-      body: const Column(
+      body: const Stack(
+        alignment: Alignment.topCenter,
         children: [
-          SprintProperties(),
+          Flex(
+            direction: Axis.vertical,
+            children: [Expanded(child: SprintMap())]
+          ),
+          Wrap(children: [SprintProperties()],),
         ],
       ),
     );

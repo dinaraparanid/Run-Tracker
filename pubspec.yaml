@@ -11,13 +11,15 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_map: ^7.0.2
+  flutter_map_geojson: ^1.0.8
   flutter_riverpod: ^2.5.1
+  cupertino_icons: ^1.0.8
+  freezed_annotation: ^2.4.4
+  geolocator: ^13.0.1
+  latlong2: ^0.9.1
   shared_preferences: ^2.3.2
   sqflite: ^2.3.3+1
-  freezed_annotation: ^2.4.4
-  cupertino_icons: ^1.0.8
-  pretty_dio_logger: ^1.4.0
-  geolocator: ^13.0.1
   universal_platform: ^1.0.0+1
 
 dev_dependencies:
