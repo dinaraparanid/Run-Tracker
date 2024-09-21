@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SprintState {
+  double get zoom => throw _privateConstructorUsedError;
   Position? get currentPosition => throw _privateConstructorUsedError;
   GeolocatorError? get error => throw _privateConstructorUsedError;
 
@@ -32,7 +33,7 @@ abstract class $SprintStateCopyWith<$Res> {
           SprintState value, $Res Function(SprintState) then) =
       _$SprintStateCopyWithImpl<$Res, SprintState>;
   @useResult
-  $Res call({Position? currentPosition, GeolocatorError? error});
+  $Res call({double zoom, Position? currentPosition, GeolocatorError? error});
 }
 
 /// @nodoc
@@ -50,10 +51,15 @@ class _$SprintStateCopyWithImpl<$Res, $Val extends SprintState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? zoom = null,
     Object? currentPosition = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
+      zoom: null == zoom
+          ? _value.zoom
+          : zoom // ignore: cast_nullable_to_non_nullable
+              as double,
       currentPosition: freezed == currentPosition
           ? _value.currentPosition
           : currentPosition // ignore: cast_nullable_to_non_nullable
@@ -74,7 +80,7 @@ abstract class _$$SprintStateImplCopyWith<$Res>
       __$$SprintStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Position? currentPosition, GeolocatorError? error});
+  $Res call({double zoom, Position? currentPosition, GeolocatorError? error});
 }
 
 /// @nodoc
@@ -90,10 +96,15 @@ class __$$SprintStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? zoom = null,
     Object? currentPosition = freezed,
     Object? error = freezed,
   }) {
     return _then(_$SprintStateImpl(
+      zoom: null == zoom
+          ? _value.zoom
+          : zoom // ignore: cast_nullable_to_non_nullable
+              as double,
       currentPosition: freezed == currentPosition
           ? _value.currentPosition
           : currentPosition // ignore: cast_nullable_to_non_nullable
@@ -109,8 +120,11 @@ class __$$SprintStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SprintStateImpl implements _SprintState {
-  const _$SprintStateImpl({this.currentPosition, this.error});
+  const _$SprintStateImpl(
+      {required this.zoom, this.currentPosition, this.error});
 
+  @override
+  final double zoom;
   @override
   final Position? currentPosition;
   @override
@@ -118,7 +132,7 @@ class _$SprintStateImpl implements _SprintState {
 
   @override
   String toString() {
-    return 'SprintState(currentPosition: $currentPosition, error: $error)';
+    return 'SprintState(zoom: $zoom, currentPosition: $currentPosition, error: $error)';
   }
 
   @override
@@ -126,13 +140,14 @@ class _$SprintStateImpl implements _SprintState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SprintStateImpl &&
+            (identical(other.zoom, zoom) || other.zoom == zoom) &&
             (identical(other.currentPosition, currentPosition) ||
                 other.currentPosition == currentPosition) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentPosition, error);
+  int get hashCode => Object.hash(runtimeType, zoom, currentPosition, error);
 
   /// Create a copy of SprintState
   /// with the given fields replaced by the non-null parameter values.
@@ -145,9 +160,12 @@ class _$SprintStateImpl implements _SprintState {
 
 abstract class _SprintState implements SprintState {
   const factory _SprintState(
-      {final Position? currentPosition,
+      {required final double zoom,
+      final Position? currentPosition,
       final GeolocatorError? error}) = _$SprintStateImpl;
 
+  @override
+  double get zoom;
   @override
   Position? get currentPosition;
   @override

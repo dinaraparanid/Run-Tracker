@@ -7,6 +7,7 @@ part 'state.freezed.dart';
 @freezed
 abstract class SprintState with _$SprintState {
   const factory SprintState({
+    required double zoom,
     Position? currentPosition,
     GeolocatorError? error,
   }) = _SprintState;

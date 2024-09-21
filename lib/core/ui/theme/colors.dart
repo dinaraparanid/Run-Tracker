@@ -5,17 +5,21 @@ const _Cultured = Color(0xFFF4F4F8);
 const _BlackChocolate = Color(0xFF1A1D07);
 const _Charcoal = Color(0xFF373F51);
 const _Platinum = Color(0xFFD8DBE2);
+const _Moonstone = Color(0xFF58A4B0);
+const _Melon = Color(0xFFDAA49A);
 
 @immutable
-class AppColors {
+final class AppColors {
   final AppBackgroundColors background;
   final AppTextColors text;
   final AppButtonColors button;
+  final AppProgressIndicatorColor indicator;
 
   const AppColors({
     required this.background,
     required this.text,
     required this.button,
+    required this.indicator,
   });
 
   factory AppColors.fromTheme(Theme theme) => switch (theme) {
@@ -24,20 +28,22 @@ class AppColors {
   };
 
   factory AppColors._darkTheme() => AppColors(
-      background: AppBackgroundColors._darkTheme(),
-      text: AppTextColors._darkTheme(),
-      button: AppButtonColors._darkTheme(),
+    background: AppBackgroundColors._darkTheme(),
+    text: AppTextColors._darkTheme(),
+    button: AppButtonColors._darkTheme(),
+    indicator: AppProgressIndicatorColor._darkTheme(),
   );
 
   factory AppColors._lightTheme() => AppColors(
     background: AppBackgroundColors._lightTheme(),
     text: AppTextColors._lightTheme(),
     button: AppButtonColors._lightTheme(),
+    indicator: AppProgressIndicatorColor._lightTheme(),
   );
 }
 
 @immutable
-class AppBackgroundColors {
+final class AppBackgroundColors {
   final Color primary;
 
   const AppBackgroundColors({required this.primary});
@@ -52,7 +58,7 @@ class AppBackgroundColors {
 }
 
 @immutable
-class AppTextColors {
+final class AppTextColors {
   final Color primary;
 
   const AppTextColors({required this.primary});
@@ -67,16 +73,60 @@ class AppTextColors {
 }
 
 @immutable
-class AppButtonColors {
+final class AppButtonColors {
   final Color topBar;
+  final AppFabColors fab;
 
-  const AppButtonColors({required this.topBar});
+  const AppButtonColors({
+    required this.topBar,
+    required this.fab,
+  });
 
-  factory AppButtonColors._darkTheme() => const AppButtonColors(
+  factory AppButtonColors._darkTheme() => AppButtonColors(
     topBar: _Cultured,
+    fab: AppFabColors._darkTheme(),
   );
 
-  factory AppButtonColors._lightTheme() => const AppButtonColors(
+  factory AppButtonColors._lightTheme() => AppButtonColors(
     topBar: _BlackChocolate,
+    fab: AppFabColors._lightTheme(),
+  );
+}
+
+@immutable
+final class AppFabColors {
+  final Color icon;
+  final Color background;
+
+  const AppFabColors({
+    required this.icon,
+    required this.background,
+  });
+
+  factory AppFabColors._darkTheme() => const AppFabColors(
+      icon: _Charcoal,
+      background: _Melon,
+  );
+
+  factory AppFabColors._lightTheme() => const AppFabColors(
+    icon: _Charcoal,
+    background: _Melon,
+  );
+}
+
+@immutable
+final class AppProgressIndicatorColor {
+  final Color primary;
+
+  const AppProgressIndicatorColor({
+    required this.primary,
+  });
+
+  factory AppProgressIndicatorColor._darkTheme() => const AppProgressIndicatorColor(
+      primary: _Moonstone,
+  );
+
+  factory AppProgressIndicatorColor._lightTheme() => const AppProgressIndicatorColor(
+    primary: _Moonstone,
   );
 }
