@@ -1,3 +1,7 @@
 {
-    "app_name": "Run Tracker"
+    "app_name": "Run Tracker",
+
+    "sprint_time": "Time",
+    "sprint_distance_km": "KM",
+    "sprint_tempo_min_km": "MIN/KM"
 }

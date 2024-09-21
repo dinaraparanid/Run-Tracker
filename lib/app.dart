@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
-import 'package:universal_platform/universal_platform.dart';
+import 'package:run_tracker/feature/sprint/presentation/screen.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -14,46 +14,11 @@ class App extends ConsumerWidget {
 
     // TODO: final home = ...
 
-    if (UniversalPlatform.isAndroid) {
-      return materialWidget(
-          theme: theme,
-          // TODO: home screen
-          home: Scaffold(
-            backgroundColor: backgroundColor,
-            body: const Text("TODO: Home Screen"),
-          )
-      );
-    }
-
-    if (UniversalPlatform.isIOS) {
-      return cupertinoWidget(
-          theme: theme,
-        // TODO: home screen
-          home: CupertinoPageScaffold(
-            backgroundColor: backgroundColor,
-            child: const Text("TODO: Home Screen"),
-          ),
-      );
-    }
-
-    return Container();
-  }
-
-  Widget materialWidget({required AppTheme theme, required Widget home}) {
-    final backgroundColor = theme.colors.background.primary;
-
     return MaterialApp(
       color: backgroundColor,
-      home: home,
-    );
-  }
-
-  Widget cupertinoWidget({required AppTheme theme, required Widget home}) {
-    final backgroundColor = theme.colors.background.primary;
-
-    return CupertinoApp(
-      color: backgroundColor,
-      home: home,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: const SprintScreen(), // TODO: HomeScreen()
     );
   }
 }

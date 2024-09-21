@@ -1,3 +1,7 @@
 {
-    "app_name": "Беговой трекер"
+    "app_name": "Беговой трекер",
+
+    "sprint_time": "Время",
+    "sprint_distance_km": "KM",
+    "sprint_tempo_min_km": "МИН/КМ"
 }

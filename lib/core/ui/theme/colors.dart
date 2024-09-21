@@ -53,15 +53,17 @@ class AppBackgroundColors {
 
 @immutable
 class AppTextColors {
-  // TODO: colors
+  final Color primary;
 
-  const AppTextColors();
+  const AppTextColors({required this.primary});
 
-  // TODO: dark theme
-  factory AppTextColors._darkTheme() => const AppTextColors();
+  factory AppTextColors._darkTheme() => const AppTextColors(
+    primary: _Cultured,
+  );
 
-  // TODO: light theme
-  factory AppTextColors._lightTheme() => const AppTextColors();
+  factory AppTextColors._lightTheme() => const AppTextColors(
+    primary: _BlackChocolate,
+  );
 }
 
 @immutable
