@@ -5,10 +5,10 @@ import 'package:latlong2/latlong.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
 import 'package:run_tracker/feature/sprint/presentation/ui/map/marker.dart';
 import 'package:run_tracker/feature/sprint/presentation/ui/map/zoom_buttons.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/start_button.dart';
 import 'package:run_tracker/feature/sprint/provider/notifier.dart';
 
 const _mapOffset = 5.0;
-const _initialZoom = 18.0;
 const _positionMarkerSize = 16.0;
 
 final _mapTileLayer = TileLayer(
@@ -48,8 +48,27 @@ final class SprintMap extends ConsumerWidget {
       ),
       children: [
         _mapTileLayer,
+
         MarkerLayer(markers: [positionMarker(latitude: lat, longitude: lng)]),
-        const SprintMapZoomButtons(),
+
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: theme.dimensions.padding.medium,
+              bottom: theme.dimensions.padding.medium,
+            ),
+            child: const SprintMapZoomButtons(),
+          ),
+        ),
+
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: EdgeInsets.only(bottom: theme.dimensions.padding.extraBig),
+            child: const StartButton(),
+          ),
+        )
       ],
     );
   }
@@ -66,6 +85,6 @@ final class SprintMap extends ConsumerWidget {
       point: LatLng(latitude, longitude),
       width: _positionMarkerSize,
       height: _positionMarkerSize,
-      child: const SprintMarker()
+      child: const SprintMarker(),
   );
 }

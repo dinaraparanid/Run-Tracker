@@ -3,5 +3,6 @@
 
     "sprint_time": "Время",
     "sprint_distance_km": "KM",
-    "sprint_tempo_min_km": "МИН/КМ"
+    "sprint_tempo_min_km": "МИН/КМ",
+    "sprint_start": "Начать"
 }

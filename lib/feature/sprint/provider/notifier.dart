@@ -52,4 +52,8 @@ final class SprintNotifier extends StateNotifier<SprintState> {
   void onBackClicked() {
     // TODO: show dialog
   }
+
+  void onStart() {
+    // TODO: start session
+  }
 }

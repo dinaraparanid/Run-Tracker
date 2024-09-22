@@ -95,21 +95,21 @@ final class AppButtonColors {
 
 @immutable
 final class AppFabColors {
-  final Color icon;
+  final Color content;
   final Color background;
 
   const AppFabColors({
-    required this.icon,
+    required this.content,
     required this.background,
   });
 
   factory AppFabColors._darkTheme() => const AppFabColors(
-      icon: _Charcoal,
+      content: _Charcoal,
       background: _Melon,
   );
 
   factory AppFabColors._lightTheme() => const AppFabColors(
-    icon: _Charcoal,
+    content: _Charcoal,
     background: _Melon,
   );
 }
