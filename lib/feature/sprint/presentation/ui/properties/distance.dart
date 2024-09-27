@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
+import 'package:run_tracker/feature/sprint/provider/notifier.dart';
+import 'package:run_tracker/feature/sprint/provider/properties.dart';
 
 class SprintDistance extends ConsumerWidget {
   const SprintDistance({super.key});
@@ -9,6 +11,7 @@ class SprintDistance extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(appThemeProvider);
+    final state = ref.watch(sprintNotifierProvider);
     final strings = AppLocalizations.of(context)!;
 
     return Column(
@@ -16,7 +19,7 @@ class SprintDistance extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          '0.00',
+          state.distanceFormatted,
           style: theme.typography.h.h3.copyWith(
             color: theme.colors.text.primary,
             fontWeight: FontWeight.w600,

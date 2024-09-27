@@ -26,12 +26,14 @@ final class SprintMapZoomButtons extends ConsumerWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         FloatingActionButton(
+          heroTag: 'zoom-in',
           backgroundColor: background,
           onPressed: notifier.zoomIn,
           child: Icon(CupertinoIcons.zoom_in, color: icon),
         ),
         SizedBox(height: theme.dimensions.padding.small),
         FloatingActionButton(
+          heroTag: 'zoom-out',
           backgroundColor: background,
           onPressed: notifier.zoomOut,
           child: Icon(CupertinoIcons.zoom_out, color: icon),

@@ -7,6 +7,8 @@ const _Charcoal = Color(0xFF373F51);
 const _Platinum = Color(0xFFD8DBE2);
 const _Moonstone = Color(0xFF58A4B0);
 const _Melon = Color(0xFFDAA49A);
+const _CarolinaBlue = Color(0xFF81B0C0);
+const _PowderBlue = Color(0xFFA9BCD0);
 
 @immutable
 final class AppColors {
@@ -14,12 +16,16 @@ final class AppColors {
   final AppTextColors text;
   final AppButtonColors button;
   final AppProgressIndicatorColor indicator;
+  final AppBottomBarColors bottomBar;
+  final AppGradient gradient;
 
   const AppColors({
     required this.background,
     required this.text,
     required this.button,
     required this.indicator,
+    required this.bottomBar,
+    required this.gradient,
   });
 
   factory AppColors.fromTheme(Theme theme) => switch (theme) {
@@ -32,6 +38,8 @@ final class AppColors {
     text: AppTextColors._darkTheme(),
     button: AppButtonColors._darkTheme(),
     indicator: AppProgressIndicatorColor._darkTheme(),
+    bottomBar: AppBottomBarColors._default(),
+    gradient: AppGradient._default(),
   );
 
   factory AppColors._lightTheme() => AppColors(
@@ -39,21 +47,48 @@ final class AppColors {
     text: AppTextColors._lightTheme(),
     button: AppButtonColors._lightTheme(),
     indicator: AppProgressIndicatorColor._lightTheme(),
+    bottomBar: AppBottomBarColors._default(),
+    gradient: AppGradient._default(),
   );
 }
 
 @immutable
 final class AppBackgroundColors {
   final Color primary;
+  final Color item;
 
-  const AppBackgroundColors({required this.primary});
+  const AppBackgroundColors({
+    required this.primary,
+    required this.item,
+  });
 
   factory AppBackgroundColors._darkTheme() => const AppBackgroundColors(
     primary: _Charcoal,
+    item: _CarolinaBlue,
   );
 
   factory AppBackgroundColors._lightTheme() => const AppBackgroundColors(
     primary: _Platinum,
+    item: _CarolinaBlue,
+  );
+}
+
+@immutable
+final class AppBottomBarColors {
+  final Color background;
+  final Color selected;
+  final Color unselected;
+
+  const AppBottomBarColors({
+    required this.background,
+    required this.selected,
+    required this.unselected,
+  });
+
+  factory AppBottomBarColors._default() => const AppBottomBarColors(
+    background: _PowderBlue,
+    selected: _Moonstone,
+    unselected: _Charcoal,
   );
 }
 
@@ -117,16 +152,37 @@ final class AppFabColors {
 @immutable
 final class AppProgressIndicatorColor {
   final Color primary;
+  final Color background;
 
   const AppProgressIndicatorColor({
     required this.primary,
+    required this.background,
   });
 
   factory AppProgressIndicatorColor._darkTheme() => const AppProgressIndicatorColor(
-      primary: _Moonstone,
+    primary: _Moonstone,
+    background: _Platinum,
   );
 
   factory AppProgressIndicatorColor._lightTheme() => const AppProgressIndicatorColor(
     primary: _Moonstone,
+    background: _Platinum,
+  );
+}
+
+@immutable
+final class AppGradient {
+  final LinearGradient readySteadyGoBackground;
+
+  const AppGradient({
+    required this.readySteadyGoBackground
+  });
+
+  factory AppGradient._default() => const AppGradient(
+      readySteadyGoBackground: LinearGradient(
+        begin: Alignment.bottomCenter,
+        end: Alignment.topCenter,
+        colors: [_Charcoal, _Moonstone],
+      ),
   );
 }

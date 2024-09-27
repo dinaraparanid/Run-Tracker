@@ -1,16 +1,24 @@
-# run_tracker
+**Run tracker**
+---------------
 
-Run tracker mobile app
+## **Developer**
+[Paranid5](https://github.com/dinaraparanid)
 
-## Getting Started
+## **About App**
+**Run Tracker** is a mobile application, written with Flutter,
+designed to help users track their running sessions.
 
-This project is a starting point for a Flutter application.
+## **Stack**
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<ul>
+   <li>Dart 3.5.1</li>
+   <li>Flutter 3.24.1</li>
+   <li>Riverpod</li>
+   <li>Hive</li>
+   <li>Flutter Map</li>
+   <li>Geolocator</li>
+   <li>Streaming Shared Preferences</li>
+   <li>Foreground Task</li>
+   <li>Freezed</li>
+   <li>FPDart</li>
+</ul>

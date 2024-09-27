@@ -1,8 +1,56 @@
 {
     "app_name": "Беговой трекер",
+    "confirm": "Принять",
+    "dismiss": "Отклонить",
+    "pause": "Пауза",
+    "stop": "Стоп",
+    "resume": "Продолжить",
+
+    "home_distance_km": "км",
+    "home_time_minutes": "минут",
+    "home_time_seconds": "секунд",
+    "home_start_session": "Начать Сессию",
+    "home_start_first_session": "Начните вашу первую сессию",
+
+    "home_home": "Домой",
+    "home_analytics": "Аналитика",
+    "home_settings": "Настройки",
 
     "sprint_time": "Время",
     "sprint_distance_km": "KM",
     "sprint_tempo_min_km": "МИН/КМ",
-    "sprint_start": "Начать"
+    "sprint_start": "Начать",
+    "sprint_foreground_task_permission_request_title": "Разрешение для уведомлений",
+    "sprint_foreground_task_permission_request_description": "Хотите отслеживать свой прогресс через уведомление? Если закрыть приложение, прогресс забега будет утерян",
+    "sprint_notification_title": "Прогресс забега",
+    "sprint_notification_distance": "Расстояние",
+    "sprint_notification_time": "Время",
+
+    "rsg_ready": "На старт",
+    "rsg_steady": "Внимание",
+    "rsg_go": "Марш",
+
+    "settings_theme_switch": "Темная тема",
+    "settings_title": "Настройки",
+
+    "analytics_heart_health": "Здоровье сердца",
+    "analytics_day_of_week": "День недели",
+    "analytics_date": "Дата",
+    "analytics_distance": "Расстояние",
+    "analytics_time": "Время",
+    "analytics_monday": "Понедельник",
+    "analytics_tuesday": "Вторник",
+    "analytics_wednesday": "Среда",
+    "analytics_thursday": "Четверг",
+    "analytics_friday": "Пятница",
+    "analytics_saturday": "Суббота",
+    "analytics_sunday": "Воскресенье",
+    "analytics_my_progress": "Мой прогресс",
+    "analytics_total_distance": "Общая дистанция",
+    "analytics_total_time": "Общее время",
+    "analytics_avg_pace": "Средний темп",
+
+    "unit_km": "км",
+    "unit_hours": "ч.",
+    "unit_kmh": "км/ч"
 }

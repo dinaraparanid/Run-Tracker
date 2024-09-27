@@ -1,0 +1,1 @@
+const int maxInt = 4294967296;

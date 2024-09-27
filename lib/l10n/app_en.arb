@@ -1,8 +1,56 @@
 {
     "app_name": "Run Tracker",
+    "confirm": "Confirm",
+    "dismiss": "Dismiss",
+    "pause": "Pause",
+    "stop": "Stop",
+    "resume": "Resume",
+
+    "home_distance_km": "km",
+    "home_time_minutes": "minutes",
+    "home_time_seconds": "seconds",
+    "home_start_session": "Start Session",
+    "home_start_first_session": "Start your first session",
+
+    "home_home": "Home",
+    "home_analytics": "Analytics",
+    "home_settings": "Settings",
 
     "sprint_time": "Time",
     "sprint_distance_km": "KM",
     "sprint_tempo_min_km": "MIN/KM",
-    "sprint_start": "Start"
+    "sprint_start": "Start",
+    "sprint_foreground_task_permission_request_title": "Notification permission required",
+    "sprint_foreground_task_permission_request_description": "Do you want to track your progress via notification? If you will close the app, the sprint progress will be lost",
+    "sprint_notification_title": "Sprint progress",
+    "sprint_notification_distance": "Distance",
+    "sprint_notification_time": "Time",
+
+    "rsg_ready": "Ready",
+    "rsg_steady": "Steady",
+    "rsg_go": "Go",
+
+    "settings_theme_switch": "Dark mode",
+    "settings_title": "Settings",
+
+    "analytics_heart_health": "Heart Health",
+    "analytics_day_of_week": "Day of the week",
+    "analytics_date": "Date",
+    "analytics_distance": "Distance",
+    "analytics_time": "Time",
+    "analytics_monday": "Monday",
+    "analytics_tuesday": "Tuesday",
+    "analytics_wednesday": "Wednesday",
+    "analytics_thursday": "Thursday",
+    "analytics_friday": "Friday",
+    "analytics_saturday": "Saturday",
+    "analytics_sunday": "Sunday",
+    "analytics_my_progress": "My Progress",
+    "analytics_total_distance": "Total distance",
+    "analytics_total_time": "Total time",
+    "analytics_avg_pace": "Average pace",
+
+    "unit_km": "km",
+    "unit_hours": "h",
+    "unit_kmh": "km/h"
 }

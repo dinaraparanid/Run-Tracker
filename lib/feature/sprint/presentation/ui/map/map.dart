@@ -3,10 +3,13 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:run_tracker/core/ui/theme/app.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/controls/active_controls.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/controls/paused_controls.dart';
+import 'package:run_tracker/feature/sprint/presentation/ui/controls/start.dart';
 import 'package:run_tracker/feature/sprint/presentation/ui/map/marker.dart';
 import 'package:run_tracker/feature/sprint/presentation/ui/map/zoom_buttons.dart';
-import 'package:run_tracker/feature/sprint/presentation/ui/start_button.dart';
 import 'package:run_tracker/feature/sprint/provider/notifier.dart';
+import 'package:run_tracker/feature/sprint/provider/session_state.dart';
 
 const _mapOffset = 5.0;
 const _positionMarkerSize = 16.0;
@@ -66,7 +69,7 @@ final class SprintMap extends ConsumerWidget {
           alignment: Alignment.bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(bottom: theme.dimensions.padding.extraBig),
-            child: const StartButton(),
+            child: controls(state.sessionState ?? SessionState.notLaunched),
           ),
         )
       ],
@@ -87,4 +90,11 @@ final class SprintMap extends ConsumerWidget {
       height: _positionMarkerSize,
       child: const SprintMarker(),
   );
+
+  Widget controls(SessionState state) => switch (state) {
+    SessionState.notLaunched => const StartButton(),
+    SessionState.active => const ActiveControls(),
+    SessionState.paused => const PausedControls(),
+    SessionState.finished => const StartButton(),
+  };
 }
